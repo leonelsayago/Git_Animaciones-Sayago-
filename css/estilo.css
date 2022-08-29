@@ -22,10 +22,31 @@ main{
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, auto);
 }
-.titulo{grid-area: titulo; text-align: center;}
+.titulo{grid-area: titulo; text-align: center; }
+.transition:hover{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	/*background-color: blue;*/
+	font-size: 20px;
+}
 .imgMain {grid-area: imgMain;}
 ..imgMain img{white: 100%;}
-.conText{grid-area: conText; text-align: center;}
+.conText{
+	grid-area: conText; 
+	text-align: center;
+	font-size: 20px;
+	background-image: linear-gradient(to left, red,green);
+	}
+@keyframes desaparecer{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+.animation{
+	animation-name: desaparecer;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
 footer{grid-area: footer;}
 li{list-style-type: none;margin: 10px;}
 a{text-decoration: none; color: black; font-size: 20px;}
