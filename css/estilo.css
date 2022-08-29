@@ -1,0 +1,52 @@
+*{background-color: red;}
+.gridIndex{
+	display: grid;	
+	grid-template-areas: 
+	"logo navAlinear"
+	"main main"
+	"footer footer"
+	"sectiom section";
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: repeat(4, auto);
+}
+header{grid-area: logo;}
+.navAlinear{grid-area: navAlinear;}
+main{
+	grid-area: main;
+	display: grid;
+	grid-template-areas:
+	"titulo titulo"
+	"conText conText"
+	"imgMain imgMain"
+	"contac newInfo"
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, auto);
+}
+.titulo{grid-area: titulo; text-align: center;}
+.imgMain {grid-area: imgMain;}
+..imgMain img{white: 100%;}
+.conText{grid-area: conText; text-align: center;}
+footer{grid-area: footer;}
+li{list-style-type: none;margin: 10px;}
+a{text-decoration: none; color: black; font-size: 20px;}
+ul{display: flex;}
+}
+.titulo h1{text-align: center;}
+/*VISTA MOBILE*/
+/*@media only screen and (max-width: 768px){
+	.gridIndex{
+		display: grid;
+		grid-template-areas: 
+		"logo logo"
+		"navAlinear navAlinear"
+		"main main"
+		"footer footer";
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, auto);
+		background-color: red;
+	}
+	header{grid-area: logo;}
+	.navAlinear{grid-area: navAlinear;}
+	main{grid-area: main;}
+	footer{grid-area: footer;display: flex;flex-direction: column;
+	}*/
